@@ -8,7 +8,7 @@ do
   do
     curl -u username:password $IP/snapshot.cgi > camera.$IP.$(date +%Y-%m-%d_%H:%M:%S:%2N).jpg & 
  done
-while [ 1 ]; do fg 2> /dev/null; [ $? == 1 ] && break; done
+ wait
 sleep .5
 done
 
